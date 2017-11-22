@@ -1,6 +1,7 @@
 [submodule "dotfiles"]
 	path = dotfiles
 	url = https://github.com/ahmadassaf/dotfiles
+        branch = linux
 
 [submodule "gitignore"]
 	path = gitignore
@@ -9,6 +10,10 @@
 [submodule "bash-it"]
 	path = bash-it
 	url = https://github.com/ahmadassaf/bash-it
+
+[submodule "configurations-linux"]
+	path = configurations_linux
+        url = https://github.com/adalisan/configurations-linux
 
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
