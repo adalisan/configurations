@@ -1,7 +1,6 @@
 [submodule "dotfiles"]
 	path = dotfiles
-	url = https://github.com/ahmadassaf/dotfiles
-        branch = linux
+	url = https://github.com/adalisan/dotfiles-1
 
 [submodule "gitignore"]
 	path = gitignore
