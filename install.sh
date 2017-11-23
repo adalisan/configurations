@@ -107,7 +107,7 @@ if [[ ! -d ${HOME}/.bash_it ]]; then
 fi
 
 # run the bash-it install script
-sh "${HOME}/.bash_it/install.sh"
+sh -c "${HOME}/.bash_it/install.sh"
 
 # add the .zsh alias files by combining the general and custom alias of the bash-it
 
@@ -118,7 +118,9 @@ read -p "Would you like to overwrite the default .zsh aliases in your home direc
 echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 	cat "${HOME}/.bash_it/aliases/available/general.aliases.bash" > "${HOME}/.oh-my-zsh/lib/aliases.zsh"
-	cat "${HOME}/.bash_it/aliases/custom.aliases.bash" >> "${HOME}/.oh-my-zsh/lib/aliases.zsh"
+        if [[ -e  "${HOME}/.bash_it/aliases/custom.aliases.bash" ]]; then
+		cat "${HOME}/.bash_it/aliases/custom.aliases.bash" >> "${HOME}/.oh-my-zsh/lib/aliases.zsh"
+	fi
 
 	# remove the first two lines specific to bash-it
 	sed -i -e '1,3d' "$SOURCE_LOCATION/oh-my-zsh/lib/aliases.zsh"
@@ -137,7 +139,7 @@ echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 	# Installing brew files
 	echo "Installing brew files configured in the ${magenta}.brewfile:"
-	sh "${HOME}/.brewfile.sh"
+	bash "${HOME}/.brewfile.sh"
 fi
 
 # Installing brew cask files
@@ -145,20 +147,23 @@ read -p "This will install the applications in the caskfile Are you sure? [Y/N] 
 echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 	echo "Installing brew cask files configured in the ${magenta}.caskile:"
-	sh "${HOME}/.caskfile.sh"
+	bash "${HOME}/.caskfile.sh"
 fi
 
 echo "\n ============================================
                 ${red}Themes${NC}
  ============================================ \n"
 # run the themes install script
-sh "$SOURCE_LOCATION/themes/install.sh"
+read -p "This will install the iterm Themes. Are you sure? [Y/N] " -n 1;
+if [[ $REPLY =~ ^[Yy]$ ]]; then
 
+	bash "$SOURCE_LOCATION/themes/install.sh"
+fi
 # Installing brew cask files
 read -p "This will apply system-wide modifications by applying the .osx file. Are you sure? [Y/N] " -n 1;
 echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-	sh "${HOME}/.osx"
+	bash "${HOME}/.osx"
 fi
 
 echo "\n ============================================
@@ -168,7 +173,7 @@ echo "\n ============================================
 read -p "This will install Powerline Fonts. Are you sure? [Y/N] " -n 1;
 echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-	sh "$SOURCE_LOCATION/Powerline-fonts/install.sh"
+	bash "$SOURCE_LOCATION/powerline-fonts/install.sh"
 fi
 
 read -p "This will install Emojis for terminal. Are you sure? [Y/N] " -n 1;
