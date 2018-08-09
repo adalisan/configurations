@@ -177,26 +177,12 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 	sudo sh -c "curl https://raw.githubusercontent.com/mrowa44/emojify/master/emojify -o /usr/local/bin/emojify && chmod +x /usr/local/bin/emojify"
 fi
 
-read -p "This will install npm globals. Are you sure? [Y/N] " -n 1;
-echo "";
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-	sh "${HOME}/.npm_globals.sh"
-fi
 
 read -p "This will install pip packaged. Are you sure? [Y/N] " -n 1;
 echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 	sh "${HOME}/.pip_globals.sh"
 fi
-
-echo "\n ${red}Installing NVM ....${NC}\n"
-# Instal NVM to install Node.js
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.27.1/install.sh | bash
-echo "source ~/.nvm/nvm.sh" >> "${HOME}/.bash_profile"
-
-nvm install stable
-
-echo "\n ${magenta}Enjoy the new configurations ....${NC}\n"
 
 ############################## HELPER FUNCTION ##################################
 
