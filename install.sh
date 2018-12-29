@@ -132,6 +132,16 @@ echo "\n ============================================
 # run the dotfiles install script
 sh "$SOURCE_LOCATION/dotfiles/install.sh"
 
+read -p "Enter user for git commits "
+echo ""
+GITCONFIG_USER=$REPLY
+
+read -p "Enter email address for git commits"
+echo ""
+
+GITCONFIG_MAIL=$REPLY
+echo "[user]\n    name = $GITCONFIG_USER\n    email = $GITCONFIG_USER\n" >> ~/.gitconfig
+
 read -p "This will install Homebrew and the files defined in the brewfile. Are you sure? [Y/N] " -n 1;
 echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
