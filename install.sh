@@ -162,7 +162,7 @@ echo "\n ============================================
                 ${red}Themes${NC}
  ============================================ \n"
 # run the themes install script
-sh "$SOURCE_LOCATION/themes/install.sh"
+sh "$SOURCE_LOCATION/Themes/install.sh"
 
 # Installing brew cask files
 read -p "This will apply system-wide modifications by applying the .osx file. Are you sure? [Y/N] " -n 1;
