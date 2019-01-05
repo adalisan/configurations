@@ -28,3 +28,6 @@
 [submodule "dircolors_2"]
 	path = dircolors
 	url = https://github.com/adalisan/dircolors.git
+[submodule "dotfiles_extra"]
+	path = dotfiles_extra
+	url = https://github.com/adalisan/dotfiles_extra
