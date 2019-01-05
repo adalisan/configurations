@@ -14,7 +14,13 @@ globals=(
   default-jdk
   tree
   mongodb-org
+  python-setuptools
   python-pip
+  htop
+  neofetch
+  python-pipenv
+  cookiecutter
+  golang-go
 )
 
 # Install apt modules
@@ -52,3 +58,31 @@ echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 	sudo bash "/root/.npm_globals.sh"
 fi;
+
+
+
+# Call the apt-install functions on the softwares list
+if [[! defined $NOTSUDOER ]]; then
+apt-install
+fi
+
+read -p "Would you like to install diff-so-fancy? [Y/N] " -n 1;
+echo "";
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+wget https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy -O $HOME/bin/diff-so-fancy
+chmod a+x  $HOME/bin/diff-so-fancy
+fi
+
+read -p "Would you like to install mmake as  more helpful make alternative? [Y/N] " -n 1;
+echo "";
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+go get github.com/tj/mmake/cmd/mmake
+echo "alias make=mmake" >> $HOME/.aliases
+fi
+
+read -p "Would you like to install has for checking dependencies? [Y/N] " -n 1;
+echo "";
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+wget https://raw.githubusercontent.com/kdabir/has/master/has -O $HOME/bin/has
+chmod a+x $HOME/bin/has
+fi
