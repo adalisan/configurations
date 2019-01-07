@@ -1,0 +1,155 @@
+{
+
+    "workbench.statusBar.visible": true,
+    "editor.fontSize": 14,
+    "editor.tabCompletion": "on",
+    "editor.fontFamily": "'Fantasque Sans Mono','Anonymous Pro','Aurulent Sans Mono','Source Code Pro','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.wordWrapColumn": 100,
+    "editor.renderWhitespace": "all",
+    // SYNC extension
+    "sync.forceDownload": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "git.confirmSync": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "svn.path": "/home/sadali/rd/.linuxbrew/bin/svn",
+    // GIT
+    "git.path": "/home/sadali/.linuxbrew/bin/git",
+    //"git.path": "C:\Program Files\Git\bin/git.exe",
+    "git.ignoreLegacyWarning": true,
+	"git.autofetch": true,
+	"git.openDiffOnClick" : true,
+    // LANGUAGE RELATED
+	// PERL
+	"cSpell.enabled": false,
+    "[perl]": {},
+    "editor.insertSpaces": true,
+    "perltidy.executable": "${env:MY_PERL}/bin/perltidy",
+    "perlcritic.executable": "${env:MY_PERL}/bin/perltidy",
+    "perlcritic.severity": "harsh",
+    "perlcritic.trace.server": "messages",
+	"perltidy-more.executable": "${env:MY_PERL}/bin/perltidy",
+	"perl-toolbox.syntax.exec": "${env:MY_PERL}/bin/perl",
+    "perl-toolbox.syntax.includePaths": [
+        "${env:MY_CUBE2}/install-optimize-x86_64/scripts",
+        "${env:MY_CUBE2}/install-optimize-x86_64/perl_lib"
+	],
+	"perl-toolbox.syntax.path": "${env:MY_PERL}/bin",
+	"perl-toolbox.lint.path": "${env:MY_PERL}/bin",
+
+
+
+
+    // PYTHON
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    //"python.pythonPath": "/home/sadali/local/anaconda/envs/FELIX_py27/bin/python",
+    //"python.pythonPath": "C:\\Users\\sadali\\AppData\\Local\\Continuum\\miniconda2\\python.exe",
+	"python.venvPath": "/home/sadali/local/anaconda/envs/",
+    "python.linting.pylintArgs": [
+        "--disable=C0303",
+        "--indent-string=\"    \""
+    ],
+	"python.linting.pylintEnabled": true,
+	"python.analysis.logLevel": "Warning",
+	"python.analysis.openFilesOnly": true,
+	"python.analysis.errors": ["Warning","Refactor","Error","warning","refactor","error"],
+	"python.linting.pylintCategorySeverity.convention": "Hint",
+	"python.linting.pylintCategorySeverity.refactor": "Warning",
+	"python.linting.maxNumberOfProblems": 200,
+    "python.autoComplete.extraPaths": [
+        "/home/sadali/rd/local/anaconda/envs/dl_tools_py2.7/lib/python2.7",
+        "/home/sadali/rd/local/anaconda/envs/py36/lib/python3.6"
+    ],
+    "python.workspaceSymbols.ctagsPath": "/nfs/mercury-11/u113/local/bin/ctags",
+    "python.jediEnabled": false,
+    "python.dataScience.allowImportFromNotebook": true,
+    "python.condaPath": "/home/sadali/rd/local/anaconda/bin/conda",
+    "python.dataScience.enabled": true,
+    "vsintellicode.python.completionsEnabled": true,
+    // JUPITER
+    "jupyter.appendResults": true,
+    //"astyle.executable": "C:/tools/AStyle/bin/astyle",
+    //C, C++ and other Langs
+    "astyle.executable": "/home/sadali/raid_dir/local/astyle/bin/astyle",
+    "cppcheck.cppcheckPath": "/home/sadali/raid_dir/local/cppcheck/cppcheck-1.79/cppcheck",
+    "C_Cpp.intelliSenseEngine": "Default",
+    //"C_Cpp.intelliSenseEngine": "Tag Parser",
+	"r.interpreter": 0,
+	"workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "bioSyntax",
+    "material-icon-theme.showUpdateMessage": false,
+    "window.zoomLevel": 1,
+    "files.associations": {
+        "*.py": "python",
+        "*.rmd": "markdown"
+    },
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/ckpts/**": true,
+        "**/CVS": true,
+        "**/expts/**": true,
+        "**/logfiles/**": true,
+        "**/node_modules/**": true,
+        "build/cache": true,
+        "build/downloads": true,
+        "build/sstate-cache": true,
+        "build/tmp/**/*": true
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "build/tmp/**/*": true,
+        "build/downloads": true,
+        "build/sstate-cache": true,
+        "build/cache": true,
+        "**/logfiles/**": true,
+        "**/ckpts/**": true,
+        "**/expts/**": true
+    },
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.showWhatsNewAfterUpgrades": false,
+    "telemetry.enableTelemetry": false,
+    "r.rterm.linux": "${R_HOME}/bin/R",
+    "terminal.integrated.rendererType": "dom",
+    "gitlab.instanceUrl": "https://e-gitlab.bbn.com",
+    //"kite.editorMetricsEnabled": "no",
+    //"kite.showDocsNotificationOnStartup": false,
+    //"cSpell.userWords": [
+    //     "bio",
+    //     "i",
+    //     "keras",
+    //     "numpy",
+    //     "python",
+    //     "sklearn"
+    // ],
+    //"cSpell.language": "en",
+    "ai.telemetry.enable": false,
+    "ai.azureml.enable": false,
+    "perl-toolbox.lint.severity": "stern",
+	"update.enableWindowsBackgroundUpdates": false,
+    "python.pythonPath": "${env:MY_PYTHON}/bin/python",
+    "bashIde.explainshellEndpoint": "https://explainshell.com",
+    "bashIde.path": "/usr/local/bin/bash-language-server",
+
+}

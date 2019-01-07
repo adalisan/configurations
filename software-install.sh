@@ -62,7 +62,7 @@ fi;
 
 
 # Call the apt-install functions on the softwares list
-if [[! defined $NOTSUDOER ]]; then
+if [[! -z $NOTSUDOER ]]; then
 apt-install
 fi
 
