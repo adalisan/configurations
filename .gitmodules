@@ -31,3 +31,6 @@
 [submodule "dotfiles_extra"]
 	path = dotfiles_extra
 	url = https://github.com/adalisan/dotfiles_extra
+[submodule "bash-git-prompt"]
+	path = bash-git-prompt
+	url = https://github.com/magicmonty/bash-git-prompt.git
