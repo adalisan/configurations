@@ -24,7 +24,7 @@
 
 [submodule "Themes"]
 	path = Themes
-	url = https://github.com/ahmadassaf/themes
+	url = git@github.com:adalisan/themes.git
 [submodule "dircolors_2"]
 	path = dircolors
 	url = https://github.com/adalisan/dircolors.git
