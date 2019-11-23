@@ -140,7 +140,9 @@ read -p "Enter email address for git commits"
 echo ""
 
 GITCONFIG_MAIL=$REPLY
-echo "[user]\n    name = $GITCONFIG_USER\n    email = $GITCONFIG_USER\n" >> ~/.gitconfig
+echo "[user]">>  ~/.gitconfig;
+echo "name = $GITCONFIG_USER">>  ~/.gitconfig;  
+echo "email = $GITCONFIG_MAIL" >> ~/.gitconfig
 
 read -p "This will install Homebrew and the files defined in the brewfile. Are you sure? [Y/N] " -n 1;
 echo "";
