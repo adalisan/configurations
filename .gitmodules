@@ -1,6 +1,7 @@
 [submodule "dotfiles"]
 	path = dotfiles
 	url = https://github.com/adalisan/dotfiles
+	branch = mac
 
 [submodule "gitignore"]
 	path = gitignore
